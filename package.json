@@ -1,0 +1,32 @@
+{
+  "name": "ulinklightning",
+  "version": "1.0.0",
+  "description": "A Nodejs Client for Ulink",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify index.js > bundle.js"
+  },
+  "keywords": [],
+  "author": "Benja Media Ltd.",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "jsdom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benja-media/Ulink-Lightining.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benja-media/Ulink-Lightining/issues"
+  },
+  "homepage": "https://github.com/benja-media/Ulink-Lightining#readme"
+}

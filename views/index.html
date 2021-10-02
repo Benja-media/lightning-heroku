@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ulink!</title>
+  </head>
+
+  <body>
+    <script>
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var SVR = JSON.parse(this.responseText);
+console.log(SVR.home)
+          if (SVR.MD === "DBG") {
+            window.location.href = "/svr/err.html?dbg=true";
+          } 
+          else {
+            if (SVR.HM === null || SVR.HM === "") {
+              window.location.href = "/svr/err.html?loc=false"
+            } else {
+              window.location.href = SVR.HM;
+            }
+          }
+        }
+      };
+      xmlhttp.open("GET", "/svr/svr.json", true);
+      xmlhttp.send();
+
+    </script>
+  </body>
+</html>
