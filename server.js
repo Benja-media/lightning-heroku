@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+console.log("DEP")
 
 // Import Json files
 const config = require('./config.json')
