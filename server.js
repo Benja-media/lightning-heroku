@@ -56,6 +56,21 @@ try {
   console.log("We tried to list your links but we have encountered an error. Please check /config.json for more!", err)
   }
 })
+
+
+
+const customer = {
+    name: "Newbie Co.",
+    order_count: 0,
+    address: "Po Box City",
+}
+const jsonString = JSON.stringify(customer)fs.writeFile('./newCustomer.json', jsonString, err => {
+    if (err) {
+        console.log('Error writing file', err)
+    } else {
+        console.log('Successfully wrote file')
+    }
+
 // Get static files
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/index.html'));
