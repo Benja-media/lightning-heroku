@@ -5,7 +5,9 @@ const fs = require('fs');
 
 // Import Json files
 const config = require('./config.json')
+console.log("./config.json LOADED")
 const svr = require('./svr/svr.json')
+console.log("./SVR LOADED")
 
 
 // Express
