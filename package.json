@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "A Nodejs Client for Ulink",
   "main": "index.js",
-  
-  "scripts: {
-  "start":"server.js"
-},
+
 
   
   "keywords": [],
