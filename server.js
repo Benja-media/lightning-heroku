@@ -59,12 +59,10 @@ try {
 
 
 
-const customer = {
-    name: "Newbie Co.",
-    order_count: 0,
-    address: "Po Box City",
+const config = {
+    test = process.env.TEST
 }
-const jsonString = JSON.stringify(customer)fs.writeFile('./newCustomer.json', jsonString, err => {
+const jsonString = JSON.stringify(customer)fs.writeFile('./config.json', jsonString, err => {
     if (err) {
         console.log('Error writing file', err)
     } else {
