@@ -2,30 +2,33 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-console.log("DEP")
+console.log("Dependencys are Loaded!")
 
 // Import Json files
+console.log("Your links are loading ...")
 const config = require('./config.json')
-console.log("./config.json LOADED")
+console.log("Your links are Imported")
 const svr = require('./svr/svr.json')
-console.log("./SVR LOADED")
+console.log("SVR Json Loaded.")
 
 
 // Express
 const app = express();
 const port = process.env.PORT || 3000;
+console.log("Express server has started!")
+console.log("I am listing on port" + port)
 
 fs.readFile('./config.json', 'utf8', (err, jsonString) => {
   if (err) {
-    console.log("File read failed:", err)
+    console.log("Whoops... File read failed:", err)
     return
   }
   try {
     const config = JSON.parse(jsonString)
-    console.log("User name is:", config.user)
+    console.log("User name is curently set to:", config.user)
     
   } catch (err) {
-    console.log('Error parsing JSON string:', err)
+    console.log('Whoops: Error parsing JSON string:', err)
   }
 // Get link pages
 try {
@@ -36,8 +39,8 @@ try {
 
       
     });
-    console.log("We could not find a symbol!")
-    console.log("Link has been set to: http://localhost:" + port +  "/" + config.home);
+    console.log("Whoops... We could not find a symbol! This is okay!")
+    console.log("Your page has been set to: http://localhost:" + port +  "/" + config.home);
 
   } else {
           app.get('/'+ config.symbol + '/' + config.home, function(req, res) {
@@ -45,7 +48,7 @@ try {
       
     });
     console.log("We found a symbol! (" + config.symbol +")")
-    console.log("Link is listing at http://localhost:" + port +  "/" + config.symbol + '/' + config.home);
+    console.log("Your page is listing at http://localhost:" + port +  "/" + config.symbol + '/' + config.home);
     
 
     }
@@ -70,7 +73,15 @@ console.log("Static files have been loaded & published")
   console.log("We have encountered an error loading client-side Javascript. A reatart of the app is sugested")
   console.log(err)
 }
+
+
+
+if (process.env.PORT || port !== 3000) {
+  console.log("Your host is listing it on port: " + port + " We have set it to 3000")
+}
+
 // Listen for app
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
+
