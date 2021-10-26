@@ -10,7 +10,7 @@ const svr = require('./svr/svr.json')
 
 // Express
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 fs.readFile('./config.json', 'utf8', (err, jsonString) => {
   if (err) {
