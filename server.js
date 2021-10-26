@@ -59,16 +59,17 @@ try {
 
 
 
-const write = {
-    "test": process.env.test
+const { writeFileSync } = require('fs');
+
+const path = './new.json';
+const config = { ip: '192.0.2.1', port: 3000 };
+
+try {
+  writeFileSync(path, JSON.stringify(config, null, 2), 'utf8');
+  console.log('Data successfully saved to disk');
+} catch (error) {
+  console.log('An error has occurred ', error);
 }
-const jsonString = JSON.stringify(write)fs.writeFile('./config.json', jsonString, err => {
-    if (err) {
-        console.log('Error writing file', err)
-    } else {
-        console.log('Successfully wrote file')
-        console.log(config)
-    }
 
 // Get static files
 app.get('/', function(req, res) {
@@ -82,6 +83,11 @@ app.use(express.static('stat'));
 app.get('/config.json', function(req, res) {
   res.sendFile(path.join(__dirname, '/config.json'));
 });
+  
+app.get('/new.json', function(req, res) {
+  res.sendFile(path.join(__dirname, '/new.json'));
+});
+  
 console.log("Static files have been loaded & published")
 } catch (err) {
   console.log("We have encountered an error loading client-side Javascript. A reatart of the app is sugested")
