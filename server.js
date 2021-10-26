@@ -60,7 +60,7 @@ try {
 
 
 const write = {
-    "test" = process.env.test
+    "test": process.env.test
 }
 const jsonString = JSON.stringify(write)fs.writeFile('./config.json', jsonString, err => {
     if (err) {
