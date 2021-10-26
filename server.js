@@ -59,14 +59,15 @@ try {
 
 
 
-const config = {
+const write = {
     test = process.env.TEST
 }
-const jsonString = JSON.stringify(customer)fs.writeFile('./config.json', jsonString, err => {
+const jsonString = JSON.stringify(write)fs.writeFile('./config.json', jsonString, err => {
     if (err) {
         console.log('Error writing file', err)
     } else {
         console.log('Successfully wrote file')
+        console.log(config)
     }
 
 // Get static files
