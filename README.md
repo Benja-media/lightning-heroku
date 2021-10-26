@@ -1,4 +1,4 @@
-# Welcome to Ulink (Formerly Instalink)!
+# Welcome to Ulink Lightning!
 
 Ulink is a simple Instagram Bio Link Generator. Instalink is the first (and only) bio link generator that has send-away messages
 
@@ -8,24 +8,23 @@ Send-away messages that are short mesages that your guests will see when they cl
 
 # Geting Started
 
-Fist you will need to deploy Ulink to a host. Here are some quick start buttons:
+This project is now ready to preview! Click below to deploy the **BETA** version:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fbenja-media%2FUlink-lightning)
 
 
-This project is not ready to use: The following buttons are dissabled:
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Benja-media/Ulink)
+# Beta version
 
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/benja-media/Ulink)
+Currently I only have a beta version ready. Heroku will automaticly deploy when I deploy to Github so please expect Minimal Downtime. Feel free to email me at <ulink-light@benja.ml> With any bugs or just submit to issues.
 
-Glitch handles files different. You will have a .html ending of your page if you do not use index!
 
-[![forks - instalink](https://img.shields.io/github/forks/benja-media/Ulink?style=social)](https://github.com/Benja-media/Ulink/network/members)
+[![forks - instalink](https://img.shields.io/github/forks/benja-media/ulink-lightning?style=social)](https://github.com/Benja-media/Ulink/network/members)
 # Adding your links
 
-All of the Settings for Instalink are in link.json file
+All of the Settings for Ulink are in config.json file
 
 Here is an example config.json file
 
-**_Version Prior to 2.1.4 Has it as "link.json" This no longer works_**
 
 ```
 {
