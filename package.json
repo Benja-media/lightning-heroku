@@ -4,7 +4,7 @@
   "description": "A Nodejs Client for Ulink",
   "main": "index.js",
   "scripts": {
-    "start": "/index.js"    
+    "start": "index.js"    
   },
   
   "keywords": [],
