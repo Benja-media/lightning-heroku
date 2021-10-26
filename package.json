@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A Nodejs Client for Ulink",
   "main": "index.js",
-  "scripts": {
+ /* "scripts": {
     "start": "index.js"    
-  },
+  },*/
   
   "keywords": [],
   "author": "Benja Media Ltd.",
