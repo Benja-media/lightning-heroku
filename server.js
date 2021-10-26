@@ -62,10 +62,10 @@ try {
 const { writeFileSync } = require('fs');
 
 const new_file = './new.json';
-const config = { ip: '192.0.2.1', port: 3000 };
+const new_json = { ip: '192.0.2.1', port: 3000 };
 
 try {
-  writeFileSync(new_file, JSON.stringify(config, null, 2), 'utf8');
+  writeFileSync(new_file, JSON.stringify(new_json, null, 2), 'utf8');
   console.log('Data successfully saved to disk');
 } catch (error) {
   console.log('An error has occurred ', error);
