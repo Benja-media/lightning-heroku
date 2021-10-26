@@ -20,9 +20,9 @@
     "react-dom": "^17.0.2",
     "requirejs": "^2.3.6"
   },
-  "engines": {
+"engines": {
     "node": "14.x"
-  }
+  },
   
   "devDependencies": {},
   "repository": {
@@ -33,4 +33,5 @@
     "url": "https://github.com/benja-media/Ulink-Lightining/issues"
   },
   "homepage": "https://github.com/benja-media/Ulink-Lightining#readme"
-}
+},
+
