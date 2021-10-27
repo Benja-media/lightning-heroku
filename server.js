@@ -57,6 +57,8 @@ try {
   }
 })
 
+if (process.env.Link2 == "" || process.env.Link2 == null)
+{console.log("No link")}
 var link1 = process.env.Link1;
 var link2 = process.env.Link2;
 var link3 = process.env.Link3;
