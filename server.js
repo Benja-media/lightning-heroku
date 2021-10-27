@@ -57,55 +57,63 @@ try {
   }
 })
 
-if (process.env.Link1 == "" || process.env.Link1 == null) {
-var link1 = null;
-} else {
-var link1 = process.env.Link1
-};
-
-if (process.env.Link2 == "" || process.env.Link2 == null) {
-var link2 = null;
-} else {
-var link2 = process.env.Link2
-};
-
-if (process.env.Link3 == "" || process.env.Link3 == null) {
-var link3 = null;
-} else {
-var link3 = process.env.Link3
-};
-
-if (process.env.Link4 == "" || process.env.Link4 == null) {
-var link4 = null;
-} else {
-var link4 = process.env.Link4
-};
-if (process.env.Link5 == "" || process.env.Link5 == null) {
-var link5 = null;
-} else {
-var link5 = process.env.Link5
-};
-
-if (process.env.Link6 == "" || process.env.Link6 == null) {
-var link6 = null;
-} else {
-var link6 = process.env.Link5
-};
-
-var link7 = process.env.Link7;
 
 console.log(link1);
 // Write file
 const { writeFileSync } = require('fs');
 
-const new_file = './new.json';
-const new_json = { test: process.env.test, port: 3000 };
+const new_file = './wrote.json';
+const new_json = {
+  "user": process.env.user,
+  "user_url": process.env.user_url,
+  "media": process.env.prime_media,
+  "symbol": process.env.symbol,
+  "media_name": process.env.media_name,
+  "name": process.env.name,
+  "photo": process.env.photo,
+  "img_top": "150",
+  "img_margin": "0",
+  "display": process.env.name,
+  "home": process.env.home,
+
+  "msg": process.env.msg,
+
+  "title1": process.env.title1,
+  "link1": process.env.link1,
+
+  "title2": process.env.link2,
+  "link2": process.env.link2,
+
+  "title3": process.env.link3,
+  "link3": process.env.link3,
+
+  "title4": process.env.link4,
+  "link4": process.env.link4,
+
+  "title5": process.env.link5,
+  "link5": process.env.link5,
+  
+  "title6": process.env.link6,
+  "link6": process.env.link6,
+  
+  "title7": process.env.link7,
+  "link7": process.env.link7,
+
+  "bio": process.env.bio,
+  
+  "err_link_title": process.env.err_link_title,
+  "err_link_url": process.env.err_link_url,
+
+  "Topic1": process.env.topic1,
+  "Topic2": process.env.topic2
+  
+};
 
 try {
   writeFileSync(new_file, JSON.stringify(new_json, null, 2), 'utf8');
-  console.log('Data successfully saved to disk');
+  console.log('wrote.json has been saved to disk');
 } catch (error) {
-  console.log('An error has occurred ', error);
+  console.log('An error has wtiring the links to disk. ', error);
 }
 
 // Get static files
@@ -130,8 +138,6 @@ console.log("Static files have been loaded & published")
   console.log("We have encountered an error loading client-side Javascript. A reatart of the app is sugested")
   console.log(err)
 }
-
-
 
 if (process.env.PORT || port !== 3000) {
   console.log("Your host is listing it on port: " + port + " We have set it to 3000")
