@@ -57,14 +57,41 @@ try {
   }
 })
 
-if (process.env.Link2 == "" || process.env.Link2 == null)
-{console.log("No link")}
-var link1 = process.env.Link1;
-var link2 = process.env.Link2;
-var link3 = process.env.Link3;
-var link4 = process.env.Link4;
-var link5 = process.env.Link5;
-var link6 = process.env.Link6;
+if (process.env.Link1 == "" || process.env.Link1 == null) {
+var link1 = null;
+} else {
+var link1 = process.env.Link1
+};
+
+if (process.env.Link2 == "" || process.env.Link2 == null) {
+var link2 = null;
+} else {
+var link2 = process.env.Link2
+};
+
+if (process.env.Link3 == "" || process.env.Link3 == null) {
+var link3 = null;
+} else {
+var link3 = process.env.Link3
+};
+
+if (process.env.Link4 == "" || process.env.Link4 == null) {
+var link4 = null;
+} else {
+var link4 = process.env.Link4
+};
+if (process.env.Link5 == "" || process.env.Link5 == null) {
+var link5 = null;
+} else {
+var link5 = process.env.Link5
+};
+
+if (process.env.Link6 == "" || process.env.Link6 == null) {
+var link6 = null;
+} else {
+var link6 = process.env.Link5
+};
+
 var link7 = process.env.Link7;
 
 console.log(link1);
