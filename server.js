@@ -57,7 +57,15 @@ try {
   }
 })
 
+var link1 = process.env.Link1;
+var link2 = process.env.Link2;
+var link3 = process.env.Link3;
+var link4 = process.env.Link4;
+var link5 = process.env.Link5;
+var link6 = process.env.Link6;
+var link7 = process.env.Link7;
 
+console.log(link1);
 // Write file
 const { writeFileSync } = require('fs');
 
