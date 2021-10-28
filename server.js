@@ -55,7 +55,7 @@ try {
 })
 
 
-console.log(link1);
+console.log("Writing links...");
 // Write file
 const { writeFileSync } = require('fs');
 
