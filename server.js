@@ -59,7 +59,7 @@ console.log("Writing links...");
 // Write file
 const { writeFileSync } = require('fs');
 
-const new_file = './wrote.json';
+const new_file = './config.json';
 const new_json = {
   "user": process.env.user,
   "user_url": process.env.user_url,
