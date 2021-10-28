@@ -6,7 +6,7 @@ console.log("Dependencys are Loaded!")
 
 // Import Json files
 console.log("Your links are loading ...")
-const config = require('./config.json')
+const config = require('./template.json')
 console.log("Your links are Imported")
 const svr = require('./svr/svr.json')
 console.log("SVR Json Loaded.")
