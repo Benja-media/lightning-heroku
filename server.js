@@ -5,7 +5,7 @@ const fs = require('fs');
 console.log("Dependencys are Loaded!")
 
 // Import Json files
-console.log("Your links are loading ...")
+console.log("We are importing link template ...")
 const config = require('./config.json')
 console.log("Your links are Imported")
 const svr = require('./svr/svr.json')
