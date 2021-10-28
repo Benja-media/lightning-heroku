@@ -35,8 +35,6 @@ try {
   if (config.symbol == "" || config.symbol == null) {
     app.get('/' + config.home, function(req, res) {
       res.sendFile(path.join(__dirname, 'views/link.html'));
-
-
       
     });
     console.log("Whoops... We could not find a symbol! This is okay!")
@@ -106,7 +104,6 @@ const new_json = {
 
   "Topic1": process.env.topic1,
   "Topic2": process.env.topic2
-  
 };
 
 try {
@@ -130,7 +127,7 @@ app.get('/config.json', function(req, res) {
 });
   
 app.get('/new.json', function(req, res) {
-  res.sendFile(path.join(__dirname, '/new.json'));
+  res.sendFile(path.join(__dirname, '/wrote.json'));
 });
   
 console.log("Static files have been loaded & published")
