@@ -67,7 +67,7 @@ const new_json = {
   "media": process.env.prime_media,
   "symbol": process.env.symbol,
   "media_name": process.env.media_name,
-  "name": process.env.name,
+  "name": process.env.Name,
   "photo": process.env.photo,
   "img_top": "150",
   "img_margin": "0",
