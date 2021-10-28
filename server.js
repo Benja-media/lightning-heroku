@@ -5,7 +5,7 @@ const fs = require('fs');
 console.log("Dependencys are Loaded!")
 
 // Import Json files
-console.log("Your links are loading ...")
+console.log("We are importing link template ...")
 const config = require('./config.json')
 console.log("Your links are Imported")
 const svr = require('./svr/svr.json')
@@ -55,11 +55,11 @@ try {
 })
 
 
-console.log(link1);
+console.log("Writing links...");
 // Write file
 const { writeFileSync } = require('fs');
 
-const new_file = './wrote.json';
+const new_file = './config.json';
 const new_json = {
   "user": process.env.user,
   "user_url": process.env.user_url,
