@@ -74,6 +74,18 @@ try {
   console.log('An error has wtiring the links to disk. ', error);
 }
 
+fs.readFile('./config.json', 'utf8', (err, jsonString) => {
+  if (err) {
+    console.log("Whoops... File read failed:", err)
+    return
+  }
+  try {
+    const config = JSON.parse(jsonString)
+    console.log("User name is curently set to:", config.user)
+    
+  } catch (err) {
+    console.log('Whoops: Error parsing JSON string:', err)
+  }
 
 // Get link pages
 try {
@@ -98,7 +110,7 @@ try {
       } catch (err) {
   console.log("We tried to list your links but we have encountered an error. Please check /config.json for more!", err)
   }
-}
+})
 
 
 // Get static files
