@@ -124,7 +124,7 @@ try {
 app.use(express.static('stat'));
 
 app.get('/config.json', function(req, res) {
-  res.sendFile(path.join(__dirname, '/config.json'));
+  res.sendFile(path.join(__dirname, '/template.json'));
 });
   
 app.get('/new.json', function(req, res) {
