@@ -128,7 +128,7 @@ app.get('/config.json', function(req, res) {
 });
   
 app.get('/new.json', function(req, res) {
-  res.sendFile(path.join(__dirname, '/new.json'));
+  res.sendFile(path.join(__dirname, '/wrote.json'));
 });
   
 console.log("Static files have been loaded & published")
