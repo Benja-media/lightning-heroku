@@ -3,7 +3,6 @@ function Atrubution() {
 }
 
 /*DO NOT CHANGE ABOVE!!!!!!!*/
-    document.getElementById("Link1").innerHTML = config.title1;
 
 
 
