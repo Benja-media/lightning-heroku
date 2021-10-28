@@ -40,7 +40,7 @@ try {
       
     });
     console.log("Whoops... We could not find a symbol! This is okay!")
-    console.log("Your page has been set to: http://localhost:" + port +  "/" + config.home);
+    console.log("Your page has been set to: http://localhost:" + port +  "/" + process.env.home);
 
   } else {
           app.get('/'+ process.env.symbol + '/' + process.env.home, function(req, res) {
