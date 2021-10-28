@@ -76,26 +76,26 @@ const new_json = {
 
   "msg": process.env.msg,
 
-  "title1": process.env.title1,
-  "link1": process.env.link1,
+  "title1": process.env.Title1,
+  "link1": process.env.Link1,
 
-  "title2": process.env.link2,
-  "link2": process.env.link2,
+  "title2": process.env.Title2,
+  "link2": process.env.Link2,
 
-  "title3": process.env.link3,
-  "link3": process.env.link3,
+  "title3": process.env.Title3,
+  "link3": process.env.Link3,
 
-  "title4": process.env.link4,
-  "link4": process.env.link4,
+  "title4": process.env.Title4,
+  "link4": process.env.Link4,
 
-  "title5": process.env.link5,
-  "link5": process.env.link5,
+  "title5": process.env.Title5,
+  "link5": process.env.Link5,
   
-  "title6": process.env.link6,
-  "link6": process.env.link6,
+  "title6": process.env.Title6,
+  "link6": process.env.Link6,
   
-  "title7": process.env.link7,
-  "link7": process.env.link7,
+  "title7": process.env.Title7,
+  "link7": process.env.Link6,
 
   "bio": process.env.bio,
   
