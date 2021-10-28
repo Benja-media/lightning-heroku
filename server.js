@@ -69,7 +69,7 @@ const new_json = {
 
 try {
   writeFileSync(new_file, JSON.stringify(new_json, null, 2), 'utf8');
-  console.log('wrote.json has been saved to disk');
+  console.log('config.json has been wrote to disk');
 } catch (error) {
   console.log('An error has wtiring the links to disk. ', error);
 }
@@ -98,7 +98,7 @@ try {
       } catch (err) {
   console.log("We tried to list your links but we have encountered an error. Please check /config.json for more!", err)
   }
-})
+}
 
 
 // Get static files
