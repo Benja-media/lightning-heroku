@@ -18,7 +18,7 @@ const port = process.env.PORT || 3000;
 console.log("Express server has started!")
 console.log("I am listing on port" + port)
 
-fs.readFile('./config.json', 'utf8', (err, jsonString) => {
+fs.readFile('./template.json', 'utf8', (err, jsonString) => {
   if (err) {
     console.log("Whoops... File read failed:", err)
     return
