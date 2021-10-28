@@ -25,7 +25,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("name").innerHTML = Link.name;
   }
 };
-xmlhttp.open("GET", "/config.json", true);
+xmlhttp.open("GET", "/new.json", true);
 xmlhttp.send();
 
 function click1() {
@@ -39,7 +39,7 @@ function click1() {
       window.location.href = Link.link1;
     }
   };
-  xmlhttp.open("GET", "/config.json", true);
+  xmlhttp.open("GET", "/new.json", true);
   xmlhttp.send();
 }
 
@@ -54,7 +54,7 @@ function click2() {
       console.log = Link.msg + "&nbsp;" + Link.link;
     }
   };
-  xmlhttp.open("GET", "/config.json", true);
+  xmlhttp.open("GET", "/new.json", true);
   xmlhttp.send();
 }
 
@@ -69,7 +69,7 @@ function click3() {
       console.log = Link.msg + "&nbsp;" + Link.link3;
     }
   };
-  xmlhttp.open("GET", "/config.json", true);
+  xmlhttp.open("GET", "/new.json", true);
   xmlhttp.send();
 }
 
@@ -84,7 +84,7 @@ function click4() {
       console.log = Link.msg + "&nbsp;" + Link.link4;
     }
   };
-  xmlhttp.open("GET", "/config.json", true);
+  xmlhttp.open("GET", "/new.json", true);
   xmlhttp.send();
 }
 
@@ -114,7 +114,7 @@ function user() {
       window.location.href = Link.media + "/" + Link.user_url;
     }
   };
-  xmlhttp.open("GET", "/config.json", true);
+  xmlhttp.open("GET", "/new.json", true);
   xmlhttp.send();
 }
 
@@ -126,6 +126,6 @@ function name() {
       document.getElementById("name").innerHTML = "AKA " + Link.user;
     }
   };
-  xmlhttp.open("GET", "/config.json", true);
+  xmlhttp.open("GET", "/new.json", true);
   xmlhttp.send();
 }
