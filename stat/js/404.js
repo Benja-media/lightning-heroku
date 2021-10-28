@@ -93,5 +93,5 @@ xmlhttp.onreadystatechange = function() {
     }
   }
 };
-xmlhttp.open("GET", "/config.json", true);
+xmlhttp.open("GET", "/new.json", true);
 xmlhttp.send();
