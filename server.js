@@ -5,7 +5,7 @@ const fs = require('fs');
 console.log("Dependencys are Loaded!")
 
 // Import Json files
-console.log("We are importing link template ...")
+console.log("Your links are loading ...")
 const config = require('./config.json')
 console.log("Your links are Imported")
 const svr = require('./svr/svr.json')
@@ -17,11 +17,49 @@ const port = process.env.PORT || 3000;
 console.log("Express server has started!")
 console.log("I am listing on port" + port)
 
-console.log("Writing links...");
+fs.readFile('./config.json', 'utf8', (err, jsonString) => {
+  if (err) {
+    console.log("Whoops... File read failed:", err)
+    return
+  }
+  try {
+    const config = JSON.parse(jsonString)
+    console.log("User name is curently set to:", config.user)
+    
+  } catch (err) {
+    console.log('Whoops: Error parsing JSON string:', err)
+  }
+// Get link pages
+try {
+  if (config.symbol == "" || config.symbol == null) {
+    app.get('/' + config.home, function(req, res) {
+      res.sendFile(path.join(__dirname, 'views/link.html'));
+      
+    });
+    console.log("Whoops... We could not find a symbol! This is okay!")
+    console.log("Your page has been set to: http://localhost:" + port +  "/" + config.home);
+
+  } else {
+          app.get('/'+ config.symbol + '/' + config.home, function(req, res) {
+      res.sendFile(path.join(__dirname, 'views/link.html'));
+      
+    });
+    console.log("We found a symbol! (" + config.symbol +")")
+    console.log("Your page is listing at http://localhost:" + port +  "/" + config.symbol + '/' + config.home);
+    
+
+    }
+      } catch (err) {
+  console.log("We tried to list your links but we have encountered an error. Please check /config.json for more!", err)
+  }
+})
+
+
+console.log(link1);
 // Write file
 const { writeFileSync } = require('fs');
 
-const new_file = './config.json';
+const new_file = './wrote.json';
 const new_json = {
   "user": process.env.user,
   "user_url": process.env.user_url,
@@ -69,49 +107,10 @@ const new_json = {
 
 try {
   writeFileSync(new_file, JSON.stringify(new_json, null, 2), 'utf8');
-  console.log('config.json has been wrote to disk');
+  console.log('wrote.json has been saved to disk');
 } catch (error) {
   console.log('An error has wtiring the links to disk. ', error);
 }
-
-fs.readFile('./config.json', 'utf8', (err, jsonString) => {
-  if (err) {
-    console.log("Whoops... File read failed:", err)
-    return
-  }
-  try {
-    const config = JSON.parse(jsonString)
-    console.log("User name is curently set to:", config.user)
-    
-  } catch (err) {
-    console.log('Whoops: Error parsing JSON string:', err)
-  }
-
-// Get link pages
-try {
-  if (config.symbol == "" || config.symbol == null) {
-    app.get('/' + config.home, function(req, res) {
-      res.sendFile(path.join(__dirname, 'views/link.html'));
-      
-    });
-    console.log("Whoops... We could not find a symbol! This is okay!")
-    console.log("Your page has been set to: http://localhost:" + port +  "/" + config.home);
-
-  } else {
-          app.get('/'+ config.symbol + '/' + config.home, function(req, res) {
-      res.sendFile(path.join(__dirname, 'views/link.html'));
-      
-    });
-    console.log("We found a symbol! (" + config.symbol +")")
-    console.log("Your page is listing at http://localhost:" + port +  "/" + config.symbol + '/' + config.home);
-    
-
-    }
-      } catch (err) {
-  console.log("We tried to list your links but we have encountered an error. Please check /config.json for more!", err)
-  }
-})
-
 
 // Get static files
 app.get('/', function(req, res) {
@@ -144,4 +143,3 @@ if (process.env.PORT || port !== 3000) {
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
-
