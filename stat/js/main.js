@@ -1,5 +1,3 @@
-import { config } from './index.js'
-
 function Atrubution() {
   window.location.href = "https://github.com/benja-media/instalink/";
 }
@@ -20,6 +18,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("Link5").innerHTML = Link.title5;
     document.getElementById("Link6").innerHTML = Link.title5;
     document.getElementById("Link7").innerHTML = Link.title7;
+    console.log(Link.title1);
     // End of Links
     document.getElementById("user").innerHTML = Link.symbol + Link.user;
     document.getElementById("name").innerHTML = Link.name;
