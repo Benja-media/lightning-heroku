@@ -32,7 +32,7 @@ fs.readFile('./config.json', 'utf8', (err, jsonString) => {
   }
 // Get link pages
 try {
-  if (config.symbol == "" || config.symbol == null) {
+  if (process.env.symbol == "" || process.env.symbol == null) {
     app.get('/' + config.home, function(req, res) {
       res.sendFile(path.join(__dirname, 'views/link.html'));
 
@@ -43,12 +43,12 @@ try {
     console.log("Your page has been set to: http://localhost:" + port +  "/" + config.home);
 
   } else {
-          app.get('/'+ config.symbol + '/' + config.home, function(req, res) {
+          app.get('/'+ process.env.symbol + '/' + process.env.home, function(req, res) {
       res.sendFile(path.join(__dirname, 'views/link.html'));
       
     });
-    console.log("We found a symbol! (" + config.symbol +")")
-    console.log("Your page is listing at http://localhost:" + port +  "/" + config.symbol + '/' + config.home);
+    console.log("We found a symbol! (" + process.env.symbol +")")
+    console.log("Your page is listing at http://localhost:" + port +  "/" + process.env.symbol + '/' + process.env.home);
     
 
     }
@@ -57,8 +57,6 @@ try {
   }
 })
 
-
-console.log(link1);
 // Write file
 const { writeFileSync } = require('fs');
 
