@@ -62,7 +62,7 @@ const { writeFileSync } = require('fs');
 
 const new_file = './wrote.json';
 const new_json = {
-  "user": process.env.user,
+  "user": process.env.User,
   "user_url": process.env.user_url,
   "media": process.env.prime_media,
   "symbol": process.env.symbol,
